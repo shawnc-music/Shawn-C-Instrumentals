@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/favicon" href="/images/favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="images/background.jpg.jpg" as="image">
+    <link rel="preload" href="images/aquatictrance.jpg" as="image">
+    <link rel="preload" href="images/beach.jpg.jpg" as="image">
+    <link rel="preload" href="images/blissful.jpg" as="image">
+    <link rel="preload" href="images/bonfire.jpg" as="image">
+    <link rel="preload" href="images/casino.jpg" as="image">
+    <link rel="preload" href="images/death.jpg" as="image">
+    <link rel="preload" href="images/dreary.jpg" as="image">
+    <link rel="preload" href="images/echo.jpg" as="image">
+    <link rel="preload" href="images/fly away.jpg" as="image">
+    <link rel="preload" href="images/fond memories.jpg" as="image">
+    <link rel="preload" href="images/heaven.jpg" as="image">
+    <link rel="preload" href="images/mexico.jpg" as="image">
+    <link rel="preload" href="images/mysteriousworld.jpg" as="image">
+    <link rel="preload" href="images/dancefloor.jpg" as="image">
+    <title>Instrumentals</title>
+    <style>
+        body {
+            margin: 0;
+            
+        }
+
+        header {
+            height: 20vh;
+            width: 100%;
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            text-align: center;
+        }
+
+        #title {
+            color: white;
+            /*font-size: 5vh;*/
+            font-size: max(30px, 5vh);
+            font-family: "Times New Roman", Times, serif;
+            margin-bottom: 0;
+            margin-top: 0;
+            color: rgb(192, 165, 14);
+           
+                }
+
+        #contact {
+            color: white;
+            font-size: max(18px, 3vh);
+            margin-top: 3vh;
+            margin-bottom: 0;
+        }
+
+        #phone {
+            color: white;
+            font-size: max(16px, 2vh);
+            margin-top: 2vh;
+            margin-bottom: 0;
+        }
+
+        span {
+            color: white;
+        }
+
+        #background {
+            height: 80vh;
+            width: 100vw;
+            position: absolute;
+            background-image: url("images/background.jpg");
+            transition: background-image 1s ease-in-out;
+            background-size: 100% 100%;
+            
+        }
+
+        #box {
+            border: 2px solid;
+            height: 45vh;
+            width: 22vw;
+            background-color: transparent;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 18vh;
+            align-items: center;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            box-shadow: 15px 15px 19px rgba(0, 0, 0, 0.5);
+        }
+
+        .audio-container {
+            margin-left: 60%;
+            transform: translateX(-50%);
+            margin-top: 5px;
+            height: 5vh;
+            width: 19vw;
+            
+        }
+
+        .song {
+            text-align: center;
+            margin-top: 0%;
+            color: white;
+            text-shadow: 2px 2px #ff0000;
+        }
+        a:link{
+            color: white;
+
+        }
+
+        a:hover
+        {
+            color: rgb(78, 78, 245);
+        }
+
+        #volume {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top:10vh;
+            font-size: clamp(16px, 5vh, 100%);
+            text-shadow: 2px 2px #ff0000;
+        
+        }
+
+
+        label {
+    font-size: clamp(16px, 3vh, 100px);
+    color:white;
+    margin-top: 20px;
+
+        }
+
+        #volumeControl[type="range"] {
+    width: 15vw;
+    height: max(16px, 2vh);
+    background-color: blue;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /*.progressBar input[type="range"]::-webkit-slider-thumb {
+    width: 20vw;
+    height: 20px;
+    background-color: #38b93c;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  */
+  .progressBar{
+    width: 10vw;
+    height: 2vh;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  button {
+    padding: 1vh 2vh;
+    font-size: 2vh;
+    background-color: rgb(194, 175, 70);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+#volume{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 id="title"><b>Shawn C's Music (Instrumentals)</b></h1>
+        <br>
+        <h3 id="contact"><u><i>Contact Information:</i></u></h3>
+        <h3 id="phone">
+            <div><span>&nbsp; &nbsp; Email: <a href="mailto:Shawnc_2015@hotmail.com"> shawnc_2015@hotmail.com</a>
+                <a href="mailto:Shawnc_2015@hotmail.com"><i>(Send email)</i></a>
+                </span> &nbsp; &nbsp; &nbsp; &nbsp;<span>Cell# (416) 320-6416 &nbsp; &nbsp;</span></div>
+        </h3>
+    </header>
+
+    <div id="background">
+            <!-- Volume control for all audio elements -->
+    <div id="volume"><label>Volume</label></label><br>
+    <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="1">
+    </div>
+    <br>
+            <div id="box">
+                 <div class="audio-container" >
+                    <audio class="audio-player" id="audio1" src="My instrumentals (mp3)/Mysterious World (instrumental).mp3" preload="auto"></audio>
+                    <button class="playPauseBtn">Play</button>
+                    <input type="range" class="progressBar" value="0" step="1" min="0">
+                  </div>
+            <h2 class="song">Mysterious World</h2>
+            <br>
+            <div class="audio-container" >
+                <audio class="audio-player" id="audio2" src="My instrumentals (mp3)/aquatic trance (instrumental).mp3" preload="auto"></audio>
+                <button class="playPauseBtn">Play</button>
+                <input type="range" class="progressBar" value="0" step="1" min="0">
+              </div>
+             <h2 class="song">Aquatic Trance</h2>
+            <br>
+
+            <div class="audio-container" >
+                <audio class="audio-player" id="audio3" src="My instrumentals (mp3)/blissful (instrumental).mp3" preload="auto"></audio>
+                <button class="playPauseBtn">Play</button>
+                <input type="range" class="progressBar" value="0" step="1" min="0">
+              </div>
+            <h2 class="song">Blissful</h2>
+            <br>
+
+            <div class="audio-container" >
+                <audio class="audio-player" id="audio4" src="My instrumentals (mp3)/cool jams (instrumental).mp3" preload="metadata"></audio>
+                <button class="playPauseBtn">Play</button>
+                <input type="range" class="progressBar" value="0" step="1" min="0">
+              </div>
+            <h2 class="song">Island Jams</h2>
+            <br>
+
+            <div class="audio-container" >
+            <audio class="audio-player" id="audio5" src="My instrumentals (mp3)/echo_finished (instrumental).mp3" preload="metadata"></audio>
+            <button class="playPauseBtn">Play</button>
+            <input type="range" class="progressBar" value="0" step="1" min="0">
+          </div>
+            <h2 class="song">Echo</h2>
+            <br>
+
+            <div class="audio-container" >
+              <audio class="audio-player" id="audio6" src="My instrumentals (mp3)/fly away (instrumental).mp3" preload="metadata"></audio>
+              <button class="playPauseBtn">Play</button>
+              <input type="range" class="progressBar" value="0" step="1" min="0">
+            </div>
+            <h2 class="song">Fly Away</h2>
+            <br>
+
+            <div class="audio-container" >
+              <audio class="audio-player" id="audio7" src="My instrumentals (mp3)/Fond memories (instrumental).mp3" preload="metadata"></audio>
+              <button class="playPauseBtn">Play</button>
+              <input type="range" class="progressBar" value="0" step="1" min="0">
+            </div>
+            <h2 class="song">Fond Memories</h2>
+            <br>
+
+            <div class="audio-container" >
+              <audio class="audio-player" id="audio8" src="My instrumentals (mp3)/cannibal's bonfire (instrumental).mp3" preload="metadata"></audio>
+              <button class="playPauseBtn">Play</button>
+              <input type="range" class="progressBar" value="0" step="1" min="0">
+            </div>
+            <h2 class="song">Cannibal's Bonfire</h2>
+            <br>
+
+            <div class="audio-container" >
+              <audio class="audio-player" id="audio9" src="My instrumentals (mp3)/Heaven Rays (instrumental).mp3" preload="metadata"></audio>
+              <button class="playPauseBtn">Play</button>
+              <input type="range" class="progressBar" value="0" step="1" min="0">
+            </div>
+            <h2 class="song">Heaven Rays</h2>
+            <br>
+
+            <div class="audio-container" >
+              <audio class="audio-player" id="audio10" src="My instrumentals (mp3)/mexican standoff (instrumental).mp3" preload="metadata"></audio>
+              <button class="playPauseBtn">Play</button>
+              <input type="range" class="progressBar" value="0" step="1" min="0">
+            </div>
+            <h2 class="song">Mexican Standoff</h2>
+            <br>
+
+            <div class="audio-container" >
+              <audio class="audio-player" id="audio11" src="My instrumentals (mp3)/death of a hero (instrumental).mp3" preload="metadata"></audio>
+              <button class="playPauseBtn">Play</button>
+              <input type="range" class="progressBar" value="0" step="1" min="0">
+            </div>
+            <h2 class="song">Death of a Hero</h2>
+            <br>
+
+            <div class="audio-container" >
+              <audio class="audio-player" id="audio12" src="My instrumentals (mp3)/casino (instrumental).mp3" preload="metadata"></audio>
+              <button class="playPauseBtn">Play</button>
+              <input type="range" class="progressBar" value="0" step="1" min="0">
+            </div>
+            <h2 class="song">Casino</h2>
+            <br>
+
+            <div class="audio-container" >
+              <audio class="audio-player" id="audio13" src="My instrumentals (mp3)/dance floor (instrumental).mp3" preload="metadata"></audio>
+              <button class="playPauseBtn">Play</button>
+              <input type="range" class="progressBar" value="0" step="1" min="0">
+            </div>
+            <h2 class="song">Dance floor</h2>
+            <br>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+  // Get all the audio players, play/pause buttons, and progress bars
+  const audioPlayers = document.querySelectorAll('.audio-player');
+  const playPauseButtons = document.querySelectorAll('.playPauseBtn');
+  const progressBars = document.querySelectorAll('.progressBar');
+  const volumeControl = document.getElementById('volumeControl');
+  const backgroundDiv = document.getElementById('background');
+  
+  // Function to stop and reset all other audio elements
+  function stopAndResetAll() {
+    audioPlayers.forEach(audio => {
+      audio.pause(); // Pause the audio
+      audio.currentTime = 0; // Reset the audio to the start
+    });
+  }
+  // Function to change the background image of the div with id="background"
+function changeBackgroundImage(audioId) {
+  let backgroundImage = '';
+  
+  // Switch statement to set the background image based on the audioId
+  switch(audioId) {
+    case 'audio1':
+      backgroundImage = 'url("images/mysteriousworld.jpg")';
+      break;
+    case 'audio2':
+      backgroundImage = 'url("images/aquatictrance.jpg")';
+      break;
+    case 'audio3':
+      backgroundImage = 'url("images/blissful.jpg")';
+      break;
+    case 'audio4':
+      backgroundImage = 'url("images/beach.jpg")';
+      break;
+    case 'audio5':
+      backgroundImage = 'url("images/echo.jpg")';
+      break;
+    case 'audio6':
+      backgroundImage = 'url("images/fly away.jpg")';
+      break;
+    case 'audio7':
+      backgroundImage = 'url("images/fond memories.jpg")';
+      break;
+    case 'audio8':
+      backgroundImage = 'url("images/bonfire.jpg")';
+      break;
+    case 'audio9':
+      backgroundImage = 'url("images/heaven.jpg")';
+      break;
+    case 'audio10':
+      backgroundImage = 'url("images/mexico.jpg")';
+      break;
+    case 'audio11':
+      backgroundImage = 'url("images/death.jpg")';
+      break;
+    case 'audio12':
+      backgroundImage = 'url("images/casino.jpg")';
+      break;
+    case 'audio13':
+      backgroundImage = 'url("images/dancefloor.jpg")';
+      break;
+    default:
+      backgroundImage = 'url("default-background.jpg")'; // Fallback image
+      break;
+  }
+
+  // Ensure the backgroundDiv exists before applying changes
+  const backgroundDiv = document.getElementById('background');
+  
+  if (backgroundDiv) {
+    // Apply the fade-out effect by reducing opacity to 0
+    backgroundDiv.style.transition = 'opacity 0.5s ease-in-out'; // Apply the transition for fading
+
+    // Fade out the current background (set opacity to 0)
+    backgroundDiv.style.opacity = 0.4;
+
+    // After 0.5 second (fade-out duration), change the background image and fade it in
+    setTimeout(() => {
+      backgroundDiv.style.backgroundImage = backgroundImage; // Change the background image
+      backgroundDiv.style.opacity = 1; // Fade in the new background
+    }, 500); // 500ms equals 0.5 second, matches the fade-out duration
+  } else {
+    console.error("Element with id 'background' not found.");
+  }
+}
+
+  
+  // Play/Pause button functionality
+  playPauseButtons.forEach((button, index) => {
+    const audio = audioPlayers[index];
+    button.addEventListener('click', () => {
+      if (audio.paused) {
+        stopAndResetAll(); // Stop and reset all other audios
+        audio.play();
+        button.textContent = 'Pause';
+        changeBackgroundImage(audio.id); // Change background when audio starts playing
+      } else {
+        audio.pause();
+        button.textContent = 'Play';
+      }
+    });
+  });
+  
+  // Update progress bar as the audio plays
+  audioPlayers.forEach((audio, index) => {
+    audio.addEventListener('timeupdate', () => {
+      const progress = (audio.currentTime / audio.duration) * 100;
+      progressBars[index].value = progress;
+    });
+  });
+  
+  // Allow the user to click on the progress bar to seek
+  progressBars.forEach((bar, index) => {
+    bar.addEventListener('input', () => {
+      const audio = audioPlayers[index];
+      audio.currentTime = (bar.value / 100) * audio.duration;
+    });
+  });
+  
+  // Volume control for all audio elements
+  volumeControl.addEventListener('input', (event) => {
+    const volume = event.target.value;
+    audioPlayers.forEach(audio => {
+      audio.volume = volume;
+    });
+  });
+  
+  // Get the audio elements by their IDs
+const audios = [
+    document.getElementById('audio6'),
+    document.getElementById('audio7'),
+    document.getElementById('audio9'),
+];
+
+// Get all the header elements with the class 'song'
+const songsHeaders = document.querySelectorAll('.song');
+const labels = document.querySelectorAll('label');
+
+// Function to update the colors
+function updateColors() {
+    // Reset all to white by default
+    songsHeaders.forEach(header => {
+        header.style.color = 'white';
+    });
+    labels.forEach(label => {
+        label.style.color = 'white';
+    });
+
+    // Check if any of the specific audio elements are playing
+    audios.forEach(audio => {
+        if (!audio.paused) {
+            // If any of the target audios is playing, set color to black
+            songsHeaders.forEach(header => {
+                header.style.color = 'black';
+            });
+            labels.forEach(label => {
+                label.style.color = 'black';
+            });
+        }
+    });
+}
+
+// Add event listeners for play, pause, and ended events on each audio
+audios.forEach(audio => {
+    audio.addEventListener('play', updateColors);
+    audio.addEventListener('pause', updateColors);
+    audio.addEventListener('ended', updateColors); // In case the audio ends
+});
+
+  
+    </script>  
+</body>
+</html>
